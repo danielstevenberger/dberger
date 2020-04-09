@@ -15,7 +15,7 @@ import {
 export class AppComponent {
   title = "dberger";
 
-  scrolled: boolean;
+  scrolled = true;
 
   @HostListener("window:scroll", ["$event"])
   onScroll(): void {

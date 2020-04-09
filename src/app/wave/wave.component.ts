@@ -16,20 +16,20 @@ import {
       state(
         "above",
         style({
-          transform: "translateY(0)",
+          transform: "translateY(-200px)",
         })
       ),
       state(
         "below",
         style({
-          transform: "translateY(200px)",
+          transform: "translateY(400px)",
         })
       ),
       transition("above => below", [
         animate(
           "1.5s ease-in",
           style({
-            transform: "translateX(1500px)",
+            transform: "translate(1500px, -200px)",
           })
         ),
       ]),
@@ -48,9 +48,9 @@ import {
   ],
 })
 export class WaveComponent implements OnInit {
-  @Input() scrolled: string;
+  @Input() scrolled: boolean;
 
-  state = "above";
+  state = "below";
 
   constructor() {}
 

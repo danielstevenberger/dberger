@@ -13,7 +13,7 @@ section .wave {
 img {
   position: fixed;
   width: 300px;
-  bottom: 0;
+  bottom: -200px;
   left: 20vw;
   z-index: 999;
 }

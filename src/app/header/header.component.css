@@ -1,21 +1,50 @@
-.btn-outline-dark:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: black;
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active {
+  font-size: 30px;
+  color: #fff;
 }
 
-.btn:active {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: black !important;
-  box-shadow: none !important;
+.nav-link {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
 }
 
-.btn:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: black;
-  box-shadow: none;
+.nav-link,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
-@media (min-width: 576px) {
-  #navButton {
-  }
+.nav-link::after {
+  content: "" !important;
+  position: absolute !important;
+}
+
+.box-e {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.box-e .nav-link::after {
+  top: 80%;
+  height: 2px;
+  width: 0%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s ease;
+}
+
+.box-e:hover .nav-link::after {
+  width: 90%;
+  transition: 0.3s ease;
 }
