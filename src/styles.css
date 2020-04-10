@@ -2,11 +2,10 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
-body {
+body, .bg-dark{
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   background: linear-gradient(271deg, #4dcaaa, #6492df, #4dcac6);
   background-size: 600% 600%;
-
   -webkit-animation: body 43s ease infinite;
   -moz-animation: body 43s ease infinite;
   animation: body 43s ease infinite;
@@ -45,3 +44,4 @@ body {
     background-position: 0% 50%;
   }
 }
+

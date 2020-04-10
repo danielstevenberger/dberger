@@ -19,13 +19,14 @@ export class AppComponent {
 
   @HostListener("window:scroll", ["$event"])
   onScroll(): void {
-    if (
-      window.innerHeight + window.scrollY >= document.body.offsetHeight ||
-      window.scrollY == 0
-    ) {
-      this.scrolled = true;
-    } else {
-      this.scrolled = false;
-    }
+
+      if (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight ||
+        window.scrollY == 0
+      ) {
+        this.scrolled = true;
+      } else {
+        this.scrolled = false;
+      }
   }
 }

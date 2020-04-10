@@ -1,7 +1,7 @@
 <div id="home-container" class="container d-flex flex-column">
   <div class="my-auto mx-auto">
     <h1 class="display-1 text-center text-white mb-3">Daniel Berger</h1>
-    <h2 class="text-center text-white mb-3">Web Developer</h2>
+    <h1 class="text-center text-white mb-3">Web Developer</h1>
     <img
       class="d-block mx-auto my-4"
       src="https://cdn.pixabay.com/photo/2014/03/25/15/23/man-296678_1280.png"
@@ -13,6 +13,7 @@
     id="dive"
     class="text-center text-white mx-auto align-self-end"
     style="cursor: pointer;"
+    (click)="onDive()"
   >
     <p class="lead">Dive Down</p>
     <fa-icon [icon]="faAngleDoubleDown"></fa-icon>

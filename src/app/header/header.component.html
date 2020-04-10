@@ -1,4 +1,10 @@
-<nav class="navbar navbar-expand-sm navbar-light mb-3">
+<nav
+  class="navbar navbar-expand-sm navbar-light mb-3 bg-dark"
+  [ngClass]="{
+    'sticky-top': top
+  }"
+
+>
   <a class="navbar-brand" href="#">DB</a>
   <button
     class="navbar-toggler"
