@@ -1,9 +1,8 @@
 <nav
+  [@navState]="state"
+  style="width: 100%; position: fixed;"
   class="navbar navbar-expand-sm navbar-light mb-3 bg-dark"
 >
-  <!-- [ngClass]="{
-  'sticky-top': top
-}" -->
   <a class="navbar-brand" style="cursor: pointer;" (click)="scrollTo('home')"
     >DB</a
   >

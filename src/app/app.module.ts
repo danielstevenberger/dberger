@@ -7,6 +7,11 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { HomeComponent } from "./home/home.component";
 import { WaveComponent } from "./wave/wave.component";
 import { HeaderComponent } from "./header/header.component";
+import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { SayHelloComponent } from './say-hello/say-hello.component';
+import { HeaderAltComponent } from './header-alt/header-alt.component';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +19,11 @@ import { HeaderComponent } from "./header/header.component";
     HomeComponent,
     WaveComponent,
     HeaderComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    SayHelloComponent,
+    HeaderAltComponent,
+
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule],
   providers: [],
