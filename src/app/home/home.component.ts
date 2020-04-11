@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDoubleDown, faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 
 
 @Component({
@@ -10,6 +10,8 @@ import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 })
 export class HomeComponent implements OnInit {
   faAngleDoubleDown = faAngleDoubleDown;
+  faPlay = faPlay;
+  faPause = faPause;
   @Output() dive = new EventEmitter();
 
   onDive(){

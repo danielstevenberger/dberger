@@ -6,6 +6,7 @@ import {
 } from "@angular/core";
 import { NavbarService } from "../services/navbar.service";
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-header",
@@ -13,13 +14,14 @@ import { trigger, transition, style, animate } from '@angular/animations';
   styleUrls: ["./header.component.css"],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private navBarService: NavbarService) {}
+  constructor(private navBarService: NavbarService, private router: Router) {}
 
   activeNav: string;
 
   scrollTo(item: string) {
+    // this.router.navigate([item])
     this.navBarService.goToNav(item)
-    this.activeNav = item;
+    // this.activeNav = item;
   }
 
   top = false;

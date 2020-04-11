@@ -11,6 +11,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SayHelloComponent } from './say-hello/say-hello.component';
 import { HeaderAltComponent } from './header-alt/header-alt.component';
+import { AppRoutingModule } from './app-routing.model';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { HeaderAltComponent } from './header-alt/header-alt.component';
     HeaderAltComponent,
 
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule],
+  imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

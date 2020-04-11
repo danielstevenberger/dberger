@@ -7,6 +7,7 @@ import {
   animate,
   state,
 } from "@angular/animations";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-header-alt",
@@ -31,13 +32,14 @@ import {
   ],
 })
 export class HeaderAltComponent implements OnInit {
-  constructor(private navBarService: NavbarService) {}
+  constructor(private navBarService: NavbarService, private router: Router) {}
 
   activeNav: string;
 
   scrollTo(item: string) {
+    // this.router.navigate([item])
     this.navBarService.goToNav(item)
-    this.activeNav = item;
+    // this.activeNav = item;
   }
 
   state = "hidden";
