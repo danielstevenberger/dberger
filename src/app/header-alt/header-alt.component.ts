@@ -42,6 +42,18 @@ export class HeaderAltComponent implements OnInit {
     // this.activeNav = item;
   }
 
+  dropdown = 'hidden'
+
+  onDropdown(){
+
+    if (this.dropdown == 'hidden'){
+      this.dropdown = 'visible';
+    }
+    else{
+      this.dropdown = 'hidden';
+    }
+
+  }
   state = "hidden";
   top = false;
 

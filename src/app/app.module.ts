@@ -12,6 +12,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SayHelloComponent } from './say-hello/say-hello.component';
 import { HeaderAltComponent } from './header-alt/header-alt.component';
 import { AppRoutingModule } from './app-routing.model';
+import { NavbarDropdownComponent } from './navbar-dropdown/navbar-dropdown.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AppRoutingModule } from './app-routing.model';
     ProjectsComponent,
     SayHelloComponent,
     HeaderAltComponent,
+    NavbarDropdownComponent,
 
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule],

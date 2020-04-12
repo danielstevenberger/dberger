@@ -1,4 +1,6 @@
 #dive {
+  position: relative;
+  top: 60vh;
   transition: all 1s ease;
 }
 #dive:hover {
@@ -7,15 +9,85 @@
 }
 
 #home-container {
+  z-index: 0;
+  position: relative;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
+  top: 0;
+  left: 0;
 }
 
-@media (max-width: 768px) {
-  #home-container {
-    height: 70vh;
+#home-container-content{
+  position: absolute;
+  width: 100%;
+  top: 10vh;
+  height: 50vh;
+}
+
+img{
+  width: 100px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+img{
+  width: 130px;
+}
+
+@media (max-width: 1200px) {
+  #home-container-content{
+    top: 15vh;
+  }
+  #dive{
+    top: 55vh;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  img{
+    width: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  #home-container-content{
+    top: 15vh;
+  }
+  #dive{
+    top: 55vh;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  img{
+    width: 90px;
+  }
+}
+
+@media (max-width: 374px) {
+  #home-container-content{
+    top: 8vh;
+  }
+  #dive{
+    top: 50vh;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  img{
+    width: 90px;
   }
 }

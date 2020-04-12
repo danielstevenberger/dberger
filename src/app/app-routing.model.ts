@@ -4,9 +4,9 @@ import { AppComponent } from "./app.component";
 
 const appRoutes: Routes = [
   { path: "", component: AppComponent },
-  { path: "skills", component: AppComponent },
-  { path: "projects", component: AppComponent },
-  { path: "contact", component: AppComponent },
+  // { path: "skills", component: AppComponent },
+  // { path: "projects", component: AppComponent },
+  // { path: "contact", component: AppComponent },
 
   { path: "**", redirectTo: "" },
 ];

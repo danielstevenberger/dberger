@@ -5,7 +5,6 @@ import {
   Output,
 } from "@angular/core";
 import { NavbarService } from "../services/navbar.service";
-import { trigger, transition, style, animate } from '@angular/animations';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,8 +22,19 @@ export class HeaderComponent implements OnInit {
     this.navBarService.goToNav(item)
     // this.activeNav = item;
   }
-
+  dropdown = 'hidden'
   top = false;
+
+  onDropdown(){
+
+    if (this.dropdown == 'hidden'){
+      this.dropdown = 'visible';
+    }
+    else{
+      this.dropdown = 'hidden';
+    }
+
+  }
 
   ngOnInit(): void {
     this.navBarService.currentNavItem.subscribe((current: string) => {

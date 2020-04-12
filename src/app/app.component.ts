@@ -6,9 +6,10 @@ import {
   OnInit,
 } from "@angular/core";
 
+import { Location } from "@angular/common";
 import { polyfill } from "smoothscroll-polyfill";
 import { NavbarService } from "./services/navbar.service";
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-root",
@@ -19,7 +20,11 @@ export class AppComponent implements OnInit {
   title = "dberger";
   scrolled = true;
 
-  constructor(private navBarService: NavbarService, private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private navBarService: NavbarService,
+    private router: Router,
+    public location: Location
+  ) {
 
   }
 
@@ -37,7 +42,7 @@ export class AppComponent implements OnInit {
   @HostListener("window:scroll", ["$event"])
   onScroll(): void {
     //nav bar current item
-    const home = this.home.nativeElement.offsetTop
+    const home = this.home.nativeElement.offsetTop;
     const skills = this.skills.nativeElement.offsetTop;
     const projects = this.projects.nativeElement.offsetTop;
     const contact = this.contact.nativeElement.offsetTop;
@@ -50,17 +55,23 @@ export class AppComponent implements OnInit {
       this.navBarService.navStatus(false);
     }
     // logic for current nav item on scroll
-    if (home <= (window.scrollY)  && skills >= window.scrollY + 300) {
-      this.router.navigate(['home'])
+    if (home <= window.scrollY && skills >= window.scrollY + 300) {
+      // this.router.navigate(["home"]);
       this.navBarService.navUpdate("home");
-    } else if (skills <= window.scrollY + 300 && projects >= window.scrollY + 300) {
-      this.router.navigate(['skills'])
+    } else if (
+      skills <= window.scrollY + 300 &&
+      projects >= window.scrollY + 300
+    ) {
+      // this.router.navigate(["skills"]);
       this.navBarService.navUpdate("skills");
-    } else if (projects <= window.scrollY +300 && contact >= window.scrollY +300) {
-      this.router.navigate(['projects'])
+    } else if (
+      projects <= window.scrollY + 300 &&
+      contact >= window.scrollY + 300
+    ) {
+      // this.router.navigate(["projects"]);
       this.navBarService.navUpdate("projects");
     } else if (contact <= window.scrollY + 300) {
-      this.router.navigate(['contact'])
+      // this.router.navigate(["contact"]);
       this.navBarService.navUpdate("contact");
     }
     //waves
@@ -75,10 +86,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.route.url)
     this.navBarService.goToNavItem.subscribe((item: string) => {
-
-
       const skills = this.skills.nativeElement;
       const projects = this.projects.nativeElement;
       const contact = this.contact.nativeElement;
@@ -92,7 +100,7 @@ export class AppComponent implements OnInit {
         });
       }
       if (item == "skills") {
-        skills.scrollIntoView({behavior: "smooth" });
+        skills.scrollIntoView({ behavior: "smooth" });
       }
       if (item == "projects") {
         projects.scrollIntoView({ behavior: "smooth" });
