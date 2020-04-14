@@ -1,4 +1,7 @@
-.container{
+.projects-container{
+  padding: 100px 10px 100px 10px;
+  margin: auto;
+  width: 90%;
   background: white;
-  height: 60vh;
+  border-radius: 20px;
 }

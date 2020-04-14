@@ -1,4 +1,33 @@
-.container{
+.say-hello-container{
+  padding: 100px 10px 100px 10px;
+  margin: auto;
+  width: 90%;
   background: white;
-  height: 60vh;
+  border-radius: 20px;
 }
+
+form{
+  width: 600px;
+}
+
+.btn{
+  color: #6492df;
+  border: 1px solid #6492df;
+}
+
+.btn:hover, .btn:active{
+  color: white;
+  background:  #6492df !important;
+  box-shadow: none !important;
+}
+
+
+.btn:focus, textarea:focus, input:focus{
+  box-shadow: none !important;
+}
+
+
+@media (max-width: 768px) {
+  form{
+    width: 90%;
+  }}

@@ -74,13 +74,16 @@ export class AppComponent implements OnInit {
       // this.router.navigate(["contact"]);
       this.navBarService.navUpdate("contact");
     }
+
     //waves
     if (
       window.innerHeight + window.scrollY >= document.body.offsetHeight ||
       window.scrollY == 0
     ) {
+      console.log(document.body.offsetHeight )
       this.scrolled = true;
-    } else {
+    }
+    else{
       this.scrolled = false;
     }
   }

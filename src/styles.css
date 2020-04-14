@@ -1,7 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
+.loading{
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 30px;
+}
 
 body,
 .bg-dark, .dropdown-view {
@@ -50,3 +55,4 @@ body::-webkit-scrollbar {
     background-position: 0% 50%;
   }
 }
+

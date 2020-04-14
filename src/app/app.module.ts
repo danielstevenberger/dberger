@@ -13,6 +13,7 @@ import { SayHelloComponent } from './say-hello/say-hello.component';
 import { HeaderAltComponent } from './header-alt/header-alt.component';
 import { AppRoutingModule } from './app-routing.model';
 import { NavbarDropdownComponent } from './navbar-dropdown/navbar-dropdown.component';
+import { LinksComponent } from './links/links.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { NavbarDropdownComponent } from './navbar-dropdown/navbar-dropdown.compo
     SayHelloComponent,
     HeaderAltComponent,
     NavbarDropdownComponent,
+    LinksComponent,
 
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule],

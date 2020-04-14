@@ -1,20 +1,29 @@
 import {
   Component,
   OnInit,
-  EventEmitter,
-  Output,
+  AfterViewInit
 } from "@angular/core";
 import { NavbarService } from "../services/navbar.service";
 import { Router } from '@angular/router';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
   styleUrls: ["./header.component.css"],
+  animations: [
+    trigger('bgImgTrigger', [
+        state('none, void', style({
+          top: '-10vh'
+        })),
+        state('maximum', style({})),
+        transition('none => maximum', animate('2s ease'))
+    ])
+],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit{
   constructor(private navBarService: NavbarService, private router: Router) {}
-
+  state = 'none';
   activeNav: string;
 
   scrollTo(item: string) {
@@ -48,5 +57,9 @@ export class HeaderComponent implements OnInit {
         this.top = false;
       }
     });
+  }
+
+  ngAfterViewInit(){
+    this.state = 'maximum'
   }
 }
