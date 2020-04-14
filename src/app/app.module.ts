@@ -14,6 +14,7 @@ import { HeaderAltComponent } from './header-alt/header-alt.component';
 import { AppRoutingModule } from './app-routing.model';
 import { NavbarDropdownComponent } from './navbar-dropdown/navbar-dropdown.component';
 import { LinksComponent } from './links/links.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { LinksComponent } from './links/links.component';
     LinksComponent,
 
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule, NgxChartsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

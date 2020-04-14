@@ -1,13 +1,108 @@
-.skills-container{
-  padding: 100px 10px 100px 10px;
+.skills-container {
+  padding: 30px 50px 20px 30px;
   margin: auto;
-  width: 90%;
+  width: 100%;
   background: white;
-  border-radius: 20px;
-
 }
 
-
-#skill:hover .info{
+#skill:hover .info {
   display: block !important;
 }
+
+fa-icon {
+  /* transform: rotate(0deg); */
+  transition: 0.5s;
+}
+
+#skills-control:hover fa-icon {
+  color: #4dcac6;
+  /* transform: rotate(90deg); */
+}
+
+#profile {
+  height: 40vh;
+  border-radius: 20px;
+}
+.skill-icon-container{
+padding-top: 60px;
+}
+.skill-icon{
+  padding: 0px 40px 0px 40px;
+}
+.skill-icon fa-icon{
+  color: white;
+}
+
+.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:focus {
+  color: black !important;
+  border: black 1px solid !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-primary:hover{
+  color: black !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  border: black 1px solid !important;
+}
+
+.active{
+  color: black !important;
+  background-color: white !important;
+  border: black 1px solid !important;
+}
+
+/* #shark {
+  position: absolute;
+  height: 150px;
+  top: 250px;
+  left: -20%;
+  animation: move 40s linear 1s infinite;
+  transform: scaleX(-1)
+}
+
+#fish1 {
+  position: absolute;
+  left: -20%;
+  top: 150px;
+  animation: move 50s linear 2s infinite;
+  height: 70px;
+}
+
+#fish2 {
+  position: absolute;
+  left: -20%;
+  top: 200px;
+  animation: move 55s linear 0s infinite backwards;
+  height: 70px;
+}
+
+#fish3 {
+  top: 250px;
+  left: 10%;
+  position: absolute;
+  animation: move 60s linear 10s infinite backwards;
+  height: 70px;
+}
+
+
+
+@keyframes move {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes moveFirst {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 100%;
+  }
+}
+ */
