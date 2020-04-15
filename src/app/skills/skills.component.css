@@ -4,44 +4,28 @@
   width: 100%;
   background: white;
 }
-
-#skill:hover .info {
-  display: block !important;
+.skill-icon-container {
+  padding-top: 60px;
 }
-
-fa-icon {
-  /* transform: rotate(0deg); */
-  transition: 0.5s;
-}
-
-#skills-control:hover fa-icon {
-  color: #4dcac6;
-  /* transform: rotate(90deg); */
-}
-
-#profile {
-  height: 40vh;
-  border-radius: 20px;
-}
-.skill-icon-container{
-padding-top: 60px;
-}
-.skill-icon{
+.skill-icon {
   padding: 0px 40px 0px 40px;
 }
-.skill-icon fa-icon{
+.skill-icon fa-icon {
   color: white;
 }
 
-.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:focus {
+.btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
   color: black !important;
   border: black 1px solid !important;
   background-color: transparent !important;
   box-shadow: none !important;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:focus{
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
   transition: 1s;
   color: black !important;
   background-color: white !important;
@@ -49,10 +33,26 @@ padding-top: 60px;
   border: black 1px solid !important;
 }
 
-.active{
+.active {
   color: black !important;
   background-color: white !important;
   border: black 1px solid !important;
+}
+
+#skill-buttons{
+  width: 700px;
+}
+
+@media (max-width: 991px){
+  .skill-info{
+    font-size: 15px !important;
+  }
+  .skill-title{
+    font-size: 20px !important;
+  }
+  #skill-buttons{
+    width: 300px;
+  }
 }
 
 /* #shark {

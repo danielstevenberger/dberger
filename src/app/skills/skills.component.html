@@ -4,9 +4,10 @@
     id="skills-control"
     class="d-flex flex-row align-items-center justify-content-center"
     style="cursor: pointer;"
+    data-aos="zoom-in"
+    data-aos-once="true"
   >
     <h1 class="text-center mr-3">Skills</h1>
-    <!-- <fa-icon [icon]="faArrowCircleRight" style="font-size: 30px;"></fa-icon> -->
   </div>
 </div>
 <div>
@@ -18,38 +19,53 @@
     "
   >
     <div class="skill-icon-container row">
-      <div class="skill-icon col-6 col-lg-3 text-center">
+      <div
+        class="skill-icon col-6 col-lg-3 text-center"
+        data-aos="fade-right"
+        data-aos-once="true"
+      >
         <fa-icon [icon]="faLightbulb" style="font-size: 30px;"></fa-icon>
-        <p class="lead" style="font-size: 30px;">Intuitive</p>
-        <p class="lead">
+        <p class="skill-title lead" style="font-size: 30px;">Intuitive</p>
+        <p class="skill-info lead">
           My goal is to create applications where a new user feel like a master.
         </p>
       </div>
-      <div class="skill-icon col-6 col-lg-3 text-center">
+      <div
+        class="skill-icon col-6 col-lg-3 text-center"
+        data-aos="fade-down"
+        data-aos-once="true"
+      >
         <fa-icon [icon]="faMobileAlt" style="font-size: 30px;"></fa-icon>
-        <p class="lead" style="font-size: 30px;">Responsive</p>
-
-        <p class="lead">
+        <p class="lead skill-title" style="font-size: 30px;">Responsive</p>
+        <p class="lead skill-info">
           Users will not be required to have a certain deivce for the optimal
           experience.
         </p>
       </div>
-      <div class="skill-icon col-6 col-lg-3 text-center">
+      <div
+        class="skill-icon col-6 col-lg-3 text-center"
+        data-aos="fade-down"
+        data-aos-once="true"
+      >
         <fa-icon [icon]="faRainbow" style="font-size: 30px;"></fa-icon>
-        <p class="lead" style="font-size: 30px;">Creative.</p>
-        <p class="lead">
+        <p class="lead skill-title" style="font-size: 30px;">Creative</p>
+        <p class="lead skill-info">
           Every user will have a memorable experience.
         </p>
       </div>
-      <div class="skill-icon col-6 col-lg-3 text-center">
+      <div
+        class="skill-icon col-6 col-lg-3 text-center"
+        data-aos="fade-left"
+        data-aos-once="true"
+      >
         <fa-icon [icon]="faMagic" style="font-size: 30px;"></fa-icon>
-        <p class="lead" style="font-size: 30px;">Dyanmic.</p>
-        <p class="lead">
+        <p class="lead skill-title" style="font-size: 30px;">Dyanmic</p>
+        <p class="lead skill-info">
           Life is not static. Neither should applications be.
         </p>
       </div>
     </div>
-    <div class="mx-auto" style="height: 300px; width: 90%;" >
+    <div class="mx-auto" style="height: 300px; width: 90%;">
       <ngx-charts-pie-grid
         [scheme]="scheme"
         [results]="selected"
@@ -61,8 +77,13 @@
       >
       </ngx-charts-pie-grid>
     </div>
-    <div class="row text-center mt-4 mx-auto" style="width: 700px;">
-      <div class="col-12 col-sm-4 mb-3">
+    <div
+      id="skill-buttons"
+      class="row text-center mt-4 mx-auto"
+      data-aos="fade-up"
+      data-aos-once="true"
+    >
+      <div class="col-sm-12 col-md-4 mb-3">
         <button
           class="btn btn btn-outline-primary"
           [class.active]="active == 'l'"
@@ -71,7 +92,7 @@
           Languages
         </button>
       </div>
-      <div class="col-12 col-sm-4 mb-3">
+      <div class="col-sm-12 col-md-4 mb-3">
         <button
           class="btn btn btn-outline-primary"
           [class.active]="active == 'f'"
@@ -80,7 +101,7 @@
           Frameowrks/Libraries
         </button>
       </div>
-      <div class="col-12 col-sm-4 mb-3">
+      <div class="col-sm-12 col-md-4 mb-3">
         <button
           class="btn btn btn-outline-primary"
           [class.active]="active == 'd'"
@@ -91,58 +112,4 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="row">
-<div class="col-4">
-<h1>Languages</h1>
-<ul>
-  <li >HTML</li>
-  <li >CSS</li>
-  <li >JavaScript</li>
-  <li >TypeScript</li>
-  <li >Python</li>
-  <li >Java</li>
-</ul>
-
-</div>
-<div class="col-4">
-<h1>Frameworks</h1>
-<ul>
-  <li>Angular</li>
-  <li>Bootstrap</li>
-</ul>
-</div>
-<div class="col-4">
-<h1>Libraries</h1>
-<ul>
-  <li>Angular Material</li>
-  <li>Node.js</li>
-  <li>jQquery</li>
-</ul>
-</div>
-<div class="col-4">
-<h1>Design</h1>
-<ul>
-  <li>Figma</li>
-  <li>Sketch</li>
-  <li>Adobe Photoshop</li>
-</ul>
-</div>
-<div class="col-4">
-<h1>Databases</h1>
-<ul>
-  <li>MongoDB</li>
-  <li>MySQL</li>
-</ul>
-</div>
-<div class="col-4">
-  <h1>Other</h1>
-  <ul>
-    <li>Touch Typing</li>
-    <li>Microsoft Office</li>
-    <li>Logic Pro X</li>
-    <li>Final Cut Pro</li>
-  </ul>
-  </div>
-</div>  -->
 </div>

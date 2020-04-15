@@ -8,7 +8,7 @@ import {
   faMagic,
   faRainbow,
 } from "@fortawesome/free-solid-svg-icons";
-// import * as AOS from "node_modules/aos";
+import * as AOS from "aos";
 
 @Component({
   selector: "app-skills",
@@ -163,6 +163,6 @@ export class SkillsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // AOS.init();
+    AOS.init();
   }
 }
