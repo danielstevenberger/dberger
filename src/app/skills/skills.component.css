@@ -38,9 +38,11 @@ padding-top: 60px;
   border: black 1px solid !important;
   background-color: transparent !important;
   box-shadow: none !important;
+  transition: .5s ease;
 }
 
-.btn-outline-primary:hover{
+.btn-outline-primary:hover, .btn-outline-primary:focus{
+  transition: 1s;
   color: black !important;
   background-color: white !important;
   box-shadow: none !important;
