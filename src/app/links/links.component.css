@@ -1,20 +1,31 @@
 .link {
   color: white;
   font-size: 20px;
+  transition: .5s;
 }
 
 .link:hover {
   text-decoration: none;
+  color: #0c628a;
 }
 
-.links-container {
-  height: 30vh;
-  width: 500px;
+.links-container{
+padding-top: 80px;
+}
+
+fa-icon{
+  font-size: 50px;
 }
 
 @media (max-width: 768px){
-  .links-container {
-    height: 30vh;
-    width: 300px;
+  .links-container{
+    padding-top: 60px;
+    padding-bottom: 20px;
+    }
+  .link{
+    font-size: 17px;
+  }
+  fa-icon{
+    font-size: 35px;
   }
 }

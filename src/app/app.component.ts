@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
 
     //waves
     if (
-      window.innerHeight + window.scrollY >= document.body.offsetHeight ||
+      // window.innerHeight + window.scrollY >= document.body.offsetHeight ||
       window.scrollY == 0
     ) {
       console.log(document.body.offsetHeight )

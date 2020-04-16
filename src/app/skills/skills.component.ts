@@ -18,8 +18,8 @@ import * as AOS from "aos";
 export class SkillsComponent implements OnInit {
   //chart
   view: any[] = [700, 400];
-  active = 'l';
-  scheme = 'picnic';
+  active = "l";
+  scheme = "picnic";
 
   languages: any[] = [
     {
@@ -28,21 +28,21 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: "CSS",
-      value: 80,
+      value: 70,
       extra: {
         code: "us",
       },
     },
     {
       name: "JavaScript",
-      value: 80,
+      value: 70,
       extra: {
         code: "fr",
       },
     },
     {
       name: "Typescript",
-      value: 60,
+      value: 70,
       extra: {
         code: "uk",
       },
@@ -76,52 +76,51 @@ export class SkillsComponent implements OnInit {
       value: 70,
     },
     {
-      name: "Node.Js",
-      value: 70,
-    },
-    {
       name: "jQuery",
       value: 70,
     },
     {
       name: "Material",
-      value: 70,
+      value: 50,
+    },
+    {
+      name: "Node.Js",
+      value: 40,
     },
     {
       name: "Mongoose",
-      value: 70,
+      value: 20,
     },
     {
       name: "Express",
-      value: 70,
+      value: 20,
     },
   ];
 
   design: any[] = [
     {
       name: "Figma",
-      value: 90,
+      value: 60,
       extra: {
         code: "us",
       },
     },
     {
       name: "Skecth",
-      value: 70,
+      value: 60,
     },
     {
       name: "Photoshop",
-      value: 70,
+      value: 50,
     },
     {
       name: "MongoDB",
-      value: 70,
+      value: 20,
     },
     {
       name: "MySQL",
-      value: 70,
+      value: 20,
     },
-
   ];
 
   selected = this.languages;
@@ -148,16 +147,16 @@ export class SkillsComponent implements OnInit {
 
   onClick(skill: string) {
     if (skill == "l") {
-      this.scheme = 'picnic'
-      this.active = 'l'
+      this.scheme = "picnic";
+      this.active = "l";
       this.selected = this.languages;
     }
     if (skill == "f") {
-      this.active = 'f'
+      this.active = "f";
       this.selected = this.frameWorks;
     }
     if (skill == "d") {
-      this.active = 'd'
+      this.active = "d";
       this.selected = this.design;
     }
   }
