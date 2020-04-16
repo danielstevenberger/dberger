@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.model';
 import { NavbarDropdownComponent } from './navbar-dropdown/navbar-dropdown.component';
 import { LinksComponent } from './links/links.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +33,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     LinksComponent,
 
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule, NgxChartsModule],
+  imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule, NgxChartsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,7 +1,7 @@
 .say-hello-container{
-  padding: 100px 10px 100px 10px;
+  padding: 60px 10px 60px 10px;
   margin: auto;
-  width: 90%;
+  width: 700px;
   background: white;
   border-radius: 20px;
 }
@@ -28,6 +28,11 @@ form{
 
 
 @media (max-width: 768px) {
+  .say-hello-container{
+
+    width: 90%;
+
+  }
   form{
     width: 90%;
   }}
