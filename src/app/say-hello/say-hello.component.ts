@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { SendMailServiceService } from "../send-mail-service.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { Subscription } from 'rxjs';
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-say-hello",
@@ -16,26 +16,41 @@ export class SayHelloComponent implements OnInit {
 
   loading = false;
   sent = false;
+  emailError = false;
+  emailSucess = false;
 
   ngOnInit(): void {
     this.sendEmailForm = new FormGroup({
-      name: new FormControl(null),
-      email: new FormControl(null),
-      message: new FormControl(null),
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      message: new FormControl(null, Validators.required),
     });
   }
+
+  exitAlert(){
+    this.emailSucess = false;
+    this.emailError = false;
+  }
+
   sendMail() {
     console.log(this.sendEmailForm.value);
-    this.loading = true;
-    this.subscription = this.sendmailservice.sendEmail(this.sendEmailForm.value).
-    subscribe(data => {
-      let msg = data['message']
-      alert(msg);
-      console.log(data, "success");
-      this.loading = false;
-    }, error => {
-      console.error(error, "error");
-      this.loading = false;
-    } );
+    if (this.sendEmailForm.valid) {
+      this.loading = true;
+      this.subscription = this.sendmailservice
+        .sendEmail(this.sendEmailForm.value)
+        .subscribe(
+          (data) => {
+            let msg = data["message"];
+            console.log(msg, "success");
+            this.emailSucess = true;
+            this.sendEmailForm.reset();
+            this.loading = false;
+          },
+          (error) => {
+            console.error(error, "error");
+            this.loading = false;
+          }
+        );
+    }
   }
 }

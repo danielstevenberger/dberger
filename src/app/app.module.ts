@@ -17,6 +17,7 @@ import { LinksComponent } from './links/links.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderAltComponent,
     NavbarDropdownComponent,
     LinksComponent,
+    LoadingSpinnerComponent,
 
   ],
   imports: [BrowserModule, BrowserAnimationsModule, FontAwesomeModule, AppRoutingModule, NgxChartsModule, ReactiveFormsModule, HttpClientModule],

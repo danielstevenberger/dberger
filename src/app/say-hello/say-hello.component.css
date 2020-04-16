@@ -1,5 +1,5 @@
 .say-hello-container{
-  padding: 60px 10px 60px 10px;
+  padding: 45px 10px 45px 10px;
   margin: auto;
   width: 700px;
   background: white;
@@ -21,6 +21,12 @@ form{
   box-shadow: none !important;
 }
 
+.disabled, .disabled:hover, .disabled:active{
+  cursor: default !important;
+  color: #6492df !important;
+  background:  white !important;
+  border: 1px solid #6492df !important;
+}
 
 .btn:focus, textarea:focus, input:focus{
   box-shadow: none !important;

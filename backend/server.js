@@ -24,15 +24,15 @@ app.post('/sendFormData', (req, res) => {
     secure: 'false',
     port: '465',
     auth: {
-      user: 'email', // must be Gmail
-      pass: 'password'
+      user: "email", // must be Gmail
+      pass: 'pass'
     }
   });
 
   var mailOptions = {
     from: 'Dberger',
     to: "email", // must be Gmail
-    cc:"",
+    cc: "",
     subject: 'Dberger',
     html: `
     <p>${req.body.name}</p>
