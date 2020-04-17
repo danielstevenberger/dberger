@@ -1,4 +1,4 @@
-<div style="height: 7vh;"></div>
+<div style="height: 70px;"></div>
 <div class="skills-container">
   <div
     id="skills-control"
@@ -10,15 +10,13 @@
     <h1 class="text-center mr-3">Skills</h1>
   </div>
 </div>
-<div>
   <div
     style="
       background-color: rgba(255, 255, 255, 0.5);
       padding-bottom: 60px;
-      width: 100%;
     "
   >
-    <div class="skill-icon-container row">
+    <div class="skill-icon-container row" style="width: 100%; margin: 0; ">
       <div
         class="skill-icon col-6 col-lg-3 text-center"
         data-aos="fade-right"
@@ -64,7 +62,7 @@
         </p>
       </div>
     </div>
-    <div class="mx-auto" style="height: 300px; width: 90%;">
+    <div class="mx-auto" style="height: 300px; width: 90%; text-align: center;">
       <ngx-charts-pie-grid
         [scheme]="scheme"
         [results]="selected"
@@ -72,7 +70,6 @@
         [label]="label"
         [designatedTotal]="designedTotal"
         [minWidth]="minWidth"
-        style="cursor: default;"
       >
       </ngx-charts-pie-grid>
     </div>
@@ -111,4 +108,3 @@
       </div>
     </div>
   </div>
-</div>
