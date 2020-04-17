@@ -1,4 +1,38 @@
-<div style="height: 10vh;"></div>
+<div style="height: 70px;"></div>
 <div class="projects-container">
   <h1 class="text-center">Projects</h1>
+</div>
+<div style="background-color: rgba(255, 255, 255, 0.5); padding-bottom: 60px;">
+  <div class="container" style="padding-top: 80px;">
+  <div class="row" >
+    <div class="col-12 col-lg-6 text-center">
+      <div class="card mx-auto mb-4" style="width: 400px; padding: 25px; border-radius: 20px; " data-aos="flip-right" data-aos-once="true">
+        <h5 class="card-title mb-4">Aniaml HR</h5>
+        <img class="card-img-top" src="{{animalHrImgs[animalHrIndex]}}" alt="Card image cap" (click)="changeImage('animal')"/>
+        <div class="card-body mt-0">
+          <p class="card-text">
+            An Angular application built for managing employees in a fun way.
+          </p>
+          <p class="card-text">(Built in 2020)</p>
+          <hr>
+          <a href="https://github.com/danielstevenberger/animal-hr">View on Github</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 text-center">
+      <div class="card mx-auto" style="width: 400px; padding: 25px; border-radius: 20px; " data-aos="flip-left" data-aos-once="true">
+        <h5 class="card-title mb-4">Column Counter</h5>
+        <img class="card-img-top" src="{{ccImgs[ccIndex]}}" alt="Card image cap" (click)="changeImage('cc')"/>
+        <div class="card-body mt-0">
+          <p class="card-text">
+            A Javascript puzzle game based off of my favorite puzzle.
+          </p>
+          <p class="card-text">(Built in 2020)</p>
+          <hr>
+          <a href="http://columncounter.com/">Play Game</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

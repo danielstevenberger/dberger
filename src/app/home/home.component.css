@@ -1,6 +1,6 @@
 #dive {
   position: relative;
-  top: 60vh;
+  top: 75%;
   transition: all 1s ease;
 }
 #dive:hover {
@@ -8,8 +8,11 @@
   transform: scale(1.2);
 }
 
-#home-container {
-  z-index: 0;
+p{
+  margin: 0;
+}
+
+.home-container {
   position: relative;
   width: 100%;
   height: 90vh;
@@ -17,10 +20,10 @@
   left: 0;
 }
 
-#home-container-content{
+.home-container-content{
   position: absolute;
   width: 100%;
-  top: 10vh;
+  top: 10%;
   height: 50vh;
 }
 
@@ -35,12 +38,56 @@ img{
   width: 200px;
 }
 
-@media (max-width: 1200px) {
-  #home-container-content{
-    top: 15vh;
+@media( max-height: 700px){
+  .home-container-content{
+    top: 5% !important;
   }
   #dive{
-    top: 55vh;
+    top: 53vh !important;
+  }
+  fa-icon{
+    font-size: .8rem !important;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h3 {
+    font-size: 1rem !important;
+  }
+  img{
+    width: 100px !important;
+  }
+  p{
+    font-size: .8rem !important;
+  }
+}
+
+
+
+@media (max-width: 1440px) {
+  .home-container-content{
+    top: 10%;
+  }
+  #dive{
+    top: 67%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  img{
+    width: 150px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .home-container-content{
+    top: 10%;
+  }
+  #dive{
+    top: 67%;
   }
   h1 {
     font-size: 3rem;
@@ -54,11 +101,11 @@ img{
 }
 
 @media (max-width: 600px) {
-  #home-container-content{
-    top: 15vh;
+  .home-container-content{
+    top: 10%;
   }
   #dive{
-    top: 55vh;
+    top: 65%;
   }
   h1 {
     font-size: 2rem;
@@ -68,23 +115,37 @@ img{
   }
   img{
     width: 150px;
+  }
+  p{
+    font-size: .8rem;
+  }
+  fa-icon{
+    font-size: .8rem;
   }
 }
 
 @media (max-width: 374px) {
-  #home-container-content{
-    top: 8vh;
+  .home-container-content{
+    top: 5%;
   }
   #dive{
-    top: 50vh;
+    top: 53vh;
+  }
+  fa-icon{
+    font-size: .8rem;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h3 {
     font-size: 1rem;
   }
   img{
-    width: 150px;
+    width: 100px;
+  }
+  p{
+    font-size: .8rem;
   }
 }
+
+

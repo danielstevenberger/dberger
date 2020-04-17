@@ -1,5 +1,5 @@
-<div [@bgImgTrigger]='state' id="home-container" class="d-flex flex-column">
-  <div id="home-container-content" class="mx-auto ">
+<div data-aos="fade-in" data-aos-duration="2000" data-aos-once="true" class="home-container">
+  <div class="home-container-content">
     <h1 class="display-4 text-center text-white mb-3 ">
       Devloper | Designer
     </h1>
@@ -10,10 +10,12 @@
       src="/assets/img/profile.png"
       alt=""
     />
+    <p class="text-white text-center lead">BS Information Science, 2019</p>
+    <p class="text-white text-center lead">The University of Arizona</p>
   </div>
   <div
     id="dive"
-    class="text-center text-white mx-auto"
+    class="text-center text-white"
     style="cursor: pointer;"
     (click)="onDive()"
   >
