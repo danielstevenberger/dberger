@@ -43,7 +43,7 @@ export class NavbarDropdownComponent implements OnInit {
 
   scrollTo(item: string) {
     this.navbarService.goToNav(item);
-    this.state = "hidden";
+    this.dropdownService.onDropdown();
   }
 
   ngOnInit(): void {

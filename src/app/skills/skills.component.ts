@@ -25,37 +25,22 @@ export class SkillsComponent implements OnInit {
     {
       name: "CSS",
       value: 70,
-      extra: {
-        code: "us",
-      },
     },
     {
       name: "JavaScript",
       value: 70,
-      extra: {
-        code: "fr",
-      },
     },
     {
-      name: "Typescript",
+      name: "TypeScript",
       value: 70,
-      extra: {
-        code: "uk",
-      },
     },
     {
       name: "Java",
       value: 30,
-      extra: {
-        code: "es",
-      },
     },
     {
       name: "Python",
       value: 20,
-      extra: {
-        code: "it",
-      },
     },
   ];
 
@@ -63,9 +48,6 @@ export class SkillsComponent implements OnInit {
     {
       name: "Bootstrap",
       value: 90,
-      extra: {
-        code: "us",
-      },
     },
     {
       name: "Angular",
@@ -83,10 +65,7 @@ export class SkillsComponent implements OnInit {
       name: "Node.Js",
       value: 40,
     },
-    {
-      name: "Mongoose",
-      value: 20,
-    },
+
     {
       name: "Express",
       value: 20,
@@ -97,9 +76,6 @@ export class SkillsComponent implements OnInit {
     {
       name: "Figma",
       value: 60,
-      extra: {
-        code: "us",
-      },
     },
     {
       name: "Skecth",
@@ -111,6 +87,10 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: "MongoDB",
+      value: 20,
+    },
+    {
+      name: "Mongoose",
       value: 20,
     },
     {
