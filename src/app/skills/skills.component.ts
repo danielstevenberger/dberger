@@ -1,14 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { Skill } from "./skill.model";
-import { SkillsService } from "./skills.service";
 import {
-  faArrowCircleRight,
   faLightbulb,
   faMobileAlt,
   faMagic,
   faRainbow,
 } from "@fortawesome/free-solid-svg-icons";
-import * as AOS from "aos";
 
 @Component({
   selector: "app-skills",
@@ -134,16 +130,14 @@ export class SkillsComponent implements OnInit {
   designedTotal = "100";
 
   //icons
-  faArrowCircleRight = faArrowCircleRight;
   faLightbulb = faLightbulb;
   faMobileAlt = faMobileAlt;
   faMagic = faMagic;
   faRainbow = faRainbow;
 
   open: boolean = false;
-  skills: Skill[];
 
-  constructor(private skillService: SkillsService) {}
+  constructor() {}
 
   onClick(skill: string) {
     if (skill == "l") {
@@ -161,7 +155,5 @@ export class SkillsComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    AOS.init();
-  }
+  ngOnInit(): void {}
 }

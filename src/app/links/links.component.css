@@ -9,12 +9,16 @@
   color: #0c628a;
 }
 
-.links-container{
+.container{
 padding-top: 80px;
 }
 
 fa-icon{
   font-size: 50px;
+}
+
+img{
+  width: 100vw;
 }
 
 @media (max-width: 768px){

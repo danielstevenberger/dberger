@@ -1,20 +1,26 @@
-.projects-container{
+.projects-container {
   padding: 30px 50px 20px 50px;
   margin: auto;
   width: 100%;
   background: white;
 }
 
-img{
+.card {
+  width: 80%;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+img {
   transition: 1s;
   cursor: pointer;
 }
 
-img:hover{
+img:hover {
   transform: scale(1.1);
 }
 
-a{
+a {
   text-decoration: none;
-  transition: .5s;
+  transition: 0.5s;
 }

@@ -7,7 +7,7 @@ import {
   animate,
   state,
 } from "@angular/animations";
-import { Router } from '@angular/router';
+import { NavbarDropDownService } from "../services/navbar-dropdown.service";
 
 @Component({
   selector: "app-header-alt",
@@ -32,27 +32,21 @@ import { Router } from '@angular/router';
   ],
 })
 export class HeaderAltComponent implements OnInit {
-  constructor(private navBarService: NavbarService, private router: Router) {}
+  constructor(
+    private navBarService: NavbarService,
+    private dropdownService: NavbarDropDownService
+  ) {}
 
   activeNav: string;
 
   scrollTo(item: string) {
-    // this.router.navigate([item])
-    this.navBarService.goToNav(item)
-    // this.activeNav = item;
+    this.navBarService.goToNav(item);
   }
 
-  dropdown = 'hidden'
+  dropdown = "hidden";
 
-  onDropdown(){
-
-    if (this.dropdown == 'hidden'){
-      this.dropdown = 'visible';
-    }
-    else{
-      this.dropdown = 'hidden';
-    }
-
+  onDropdown() {
+    this.dropdownService.onDropdown();
   }
   state = "hidden";
   top = false;

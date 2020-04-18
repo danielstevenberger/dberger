@@ -3,33 +3,28 @@
   style="width: 100%; position: fixed; z-index: 200;"
   class="navbar navbar-expand-sm navbar-light mb-3 bg-dark"
 >
-  <a class="navbar-brand" style="cursor: pointer;" (click)="scrollTo('home')"
-    >DB</a
-  >
-  <button
-    class="navbar-toggler"
-    (click)="onDropdown()"
-  >
+  <a class="navbar-brand" (click)="scrollTo('home')">DB</a>
+  <button class="navbar-toggler" (click)="onDropdown()">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <div class="box-e" [class.active]="activeNav == 'skills'">
+        <div class="underline-box" [class.active]="activeNav == 'skills'">
           <a class="nav-link" (click)="scrollTo('skills')">Skills</a>
         </div>
       </li>
       <li class="nav-item">
-        <div class="box-e" [class.active]="activeNav == 'projects'">
+        <div class="underline-box" [class.active]="activeNav == 'projects'">
           <a class="nav-link" (click)="scrollTo('projects')">Projects</a>
         </div>
       </li>
       <li class="nav-item">
-        <div class="box-e" [class.active]="activeNav == 'contact'">
+        <div class="underline-box" [class.active]="activeNav == 'contact'">
           <a class="nav-link" (click)="scrollTo('contact')">Say Hello</a>
         </div>
       </li>
     </ul>
   </div>
 </nav>
-<app-navbar-dropdown [state]="dropdown"></app-navbar-dropdown>
+<app-navbar-dropdown></app-navbar-dropdown>

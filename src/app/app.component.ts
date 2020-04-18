@@ -9,7 +9,7 @@ import {
 import { Location } from "@angular/common";
 import { polyfill } from "smoothscroll-polyfill";
 import { NavbarService } from "./services/navbar.service";
-import { Router } from "@angular/router";
+import * as AOS from "aos";
 
 @Component({
   selector: "app-root",
@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
 
   constructor(
     private navBarService: NavbarService,
-    private router: Router,
     public location: Location
   ) {
 
@@ -56,28 +55,23 @@ export class AppComponent implements OnInit {
     }
     // logic for current nav item on scroll
     if (home <= window.scrollY && skills >= window.scrollY + 300) {
-      // this.router.navigate(["home"]);
       this.navBarService.navUpdate("home");
     } else if (
       skills <= window.scrollY + 300 &&
       projects >= window.scrollY + 300
     ) {
-      // this.router.navigate(["skills"]);
       this.navBarService.navUpdate("skills");
     } else if (
       projects <= window.scrollY + 300 &&
       contact >= window.scrollY + 300
     ) {
-      // this.router.navigate(["projects"]);
       this.navBarService.navUpdate("projects");
     } else if (contact <= window.scrollY + 300) {
-      // this.router.navigate(["contact"]);
       this.navBarService.navUpdate("contact");
     }
 
     //waves
     if (
-      // window.innerHeight + window.scrollY >= document.body.offsetHeight ||
       window.scrollY == 0
     ) {
       console.log(document.body.offsetHeight )
@@ -89,6 +83,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    AOS.init();
+
     this.navBarService.goToNavItem.subscribe((item: string) => {
       const skills = this.skills.nativeElement;
       const projects = this.projects.nativeElement;

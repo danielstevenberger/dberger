@@ -1,37 +1,27 @@
-import {
-  Component,
-  OnInit,
-  AfterViewInit
-} from "@angular/core";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { NavbarService } from "../services/navbar.service";
-import { Router } from '@angular/router';
+import { NavbarDropDownService } from "../services/navbar-dropdown.service";
 
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.css"]
+  styleUrls: ["./header.component.css"],
 })
-export class HeaderComponent implements OnInit{
-  constructor(private navBarService: NavbarService, private router: Router) {}
+export class HeaderComponent implements OnInit {
+  constructor(
+    private navBarService: NavbarService,
+    private dropdwonService: NavbarDropDownService
+  ) {}
   activeNav: string;
 
   scrollTo(item: string) {
-    // this.router.navigate([item])
-    this.navBarService.goToNav(item)
-    // this.activeNav = item;
+    this.navBarService.goToNav(item);
   }
-  dropdown = 'hidden'
+  dropdown = "hidden";
   top = false;
 
-  onDropdown(){
-
-    if (this.dropdown == 'hidden'){
-      this.dropdown = 'visible';
-    }
-    else{
-      this.dropdown = 'hidden';
-    }
-
+  onDropdown() {
+    this.dropdwonService.onDropdown();
   }
 
   ngOnInit(): void {
